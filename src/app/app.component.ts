@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'SpringAndAngularConnection';
+  title = 'angular13-iwa2022-http-students';
 }
