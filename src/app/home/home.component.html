@@ -1,1 +1,17 @@
-<p>home component works!</p>
+<div class="info" *ngIf="info.token != '{}'; else loggedOut">
+  <h5 class="text-primary">Your Information</h5>
+  <p>
+    <strong>Username:</strong> {{info.username}}<br/>
+    <strong>Id:</strong> {{info.id}}<br />
+    <strong>Subjects:</strong>
+  <ul>
+  <li *ngFor="let subject of user.subjects">
+    <span class="badge">id: {{subject.id}}, Name: {{subject.subjectName}}</span>
+  </li>
+</ul>
+  <button class="glow-on-hover" (click)="logout()">Logout</button>
+</div>
+
+<ng-template #loggedOut>
+  Please login.
+</ng-template>

@@ -1,0 +1,9 @@
+.grade{
+  position: relative;
+  left: 250px;
+  top: 30px;
+}
+
+.bigger_button.glow-on-hover{
+  width: 230px;
+}

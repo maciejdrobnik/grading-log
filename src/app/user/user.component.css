@@ -1,4 +1,5 @@
-.info{
+.user{
   position: relative;
   left: 250px;
+  list-style-type: none;
 }

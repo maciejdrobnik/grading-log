@@ -1,0 +1,17 @@
+<div class="student">
+<label>Student Username:
+    <input type="text" #studentId />
+</label>
+  <br>
+  <br>
+  <button class="mybutton" (click)="getStudent(studentId.value)">Get Student</button>
+  <div *ngIf="after">
+    <div *ngIf="tempStudent">
+    <a >Name:{{tempStudent.firstname}} LastName:{{tempStudent.lastname}}</a>
+    </div>
+    <div *ngIf="!tempStudent">
+      <a>No such student</a>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,18 @@
+<div class="grade">
+<p>Task: {{task.taskName}}</p>
+<div *ngIf="!admin">
+<a *ngIf="tempGrade">Your grade: {{tempGrade.grade}}</a>
+<a *ngIf="!tempGrade">You have no grade</a>
+</div>
+<div *ngIf="admin">
+<li *ngFor="let student of students" >
+  <div class = "bigger_button" *ngIf="student.id">
+  <a *ngIf="student.tempGrade">ID:{{student.id}} Name: {{student.firstname}} {{student.lastname}}   Grade:{{student.tempGrade}}</a>
+  <a *ngIf="!student.tempGrade">ID:{{student.id}} Name: {{student.firstname}} {{student.lastname}}   Grade:No grade</a><button class="glow-on-hover" (click)="addGrade(gradeInput.value, student.id)">Add Grade</button>    <button class="glow-on-hover" (click)="deleteUser(student.id)">Delete User</button>
+  </div>
+</li>
+<label>grade:
+  <input type="number" placeholder="grade" min="1" max="5" #gradeInput/>
+</label>
+</div>
+</div>

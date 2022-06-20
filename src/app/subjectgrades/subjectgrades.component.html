@@ -1,0 +1,19 @@
+<div class="subjectGrades">
+    <label>Subject Id:
+      <input type="text" #subjectId />
+    </label>
+    <br>
+    <br>
+    <button class="mybutton" (click)="getSubject(subjectId.value)">Get Subject</button>
+    <div *ngIf="after">
+      <div *ngIf="tempSubject">
+        <li *ngFor="let task of tempSubject.tasks">
+        <a>Name:{{task.taskName}} Your Grade:<a *ngIf="task.tempGrade"> {{task.tempGrade}}</a><a *ngIf="!task.tempGrade"> No grade</a></a>
+        <br>
+        </li>
+      </div>
+      <div *ngIf="!tempSubject">
+        <a>No such subject or you are not a student of this subject</a>
+      </div>
+    </div>
+</div>

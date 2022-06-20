@@ -1,0 +1,8 @@
+.task{
+  position: relative;
+  left: 250px;
+  top: 30px;
+}
+.glow-on-hover{
+  width: 230px;
+}

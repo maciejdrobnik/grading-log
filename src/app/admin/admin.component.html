@@ -1,0 +1,13 @@
+<div class="admin">
+<h1>Your Subjects</h1>
+<ul>
+  <li *ngFor="let subject of user.subjects">
+    <button class="mybutton" *ngIf="subject" (click) ="onSelect(subject)">Name: {{subject.subjectName}}</button>
+  </li>
+  <label>Subject Name:
+    <input #subjectName />
+  </label>
+  <button class="glow-on-hover" (click)="addSubject(subjectName.value)">Add Subject</button>
+</ul>
+</div>
+

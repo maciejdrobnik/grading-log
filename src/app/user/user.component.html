@@ -1,0 +1,10 @@
+<div class="user">
+  <h4>Your Subjects</h4>
+<ul >
+  <div *ngIf="user">
+  <li *ngFor="let subject of user.subjects" >
+    <button class="mybutton" (click) ="onSelect(subject)">{{subject.subjectName}}</button>
+  </li>
+  </div>
+</ul>
+</div>

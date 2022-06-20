@@ -1,0 +1,28 @@
+<div class="task">
+<h4>Tasks from {{subject.subjectName}}</h4>
+
+<ul>
+  <li *ngFor="let task of subject.tasks" >
+    <div *ngIf="task"><button class="mybutton" (click)="onSelect(task, subject)">{{task.taskName}}</button></div>
+  </li>
+</ul>
+<div *ngIf="admin">
+  <label>Task Name:
+    <input #TaskName />
+  </label>
+  <br>
+  <label>Task Description:
+    <input #description />
+  </label>
+  <br>
+  <button class="mybutton" (click)="addTask(TaskName.value, description.value)">Add Task</button>
+
+<ul>
+  <li *ngFor="let student of students" >
+    <div *ngIf="student.id">
+    <a >Student Name:{{student.firstname}}     </a><button class="glow-on-hover"(click)="addToSubject(student.id)">Add to this subject student with id {{student.id}}</button>
+    </div>
+  </li>
+</ul>
+</div>
+</div>

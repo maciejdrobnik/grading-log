@@ -1,0 +1,12 @@
+<div class="subject">
+<label>Subject name:
+  <input #subjectName />
+</label>
+<ul>
+  <li *ngFor="let subject of subjectList">
+    <span class="badge">id: {{subject.id}}, Name: {{subject.subjectName}}</span>
+    <button title="put" (click)="put(subject, subjectName.value)">put</button>
+  </li>
+</ul>
+<button title="post" (click)="post(subjectName.value)">post</button>
+</div>

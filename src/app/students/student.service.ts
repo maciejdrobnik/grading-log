@@ -121,7 +121,5 @@ export class StudentService {
     return this.http.get<number>(url);
   }
 
-  //updatedCounter(dataAsParams) {
-  //  this.totalItems.next(dataAsParams);
-  //}
+
 }
